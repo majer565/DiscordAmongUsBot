@@ -61,13 +61,9 @@ public class VoteKickEvent implements EventListener<MessageCreateEvent>{
                         Container.kickCount++;
 
                         if(Container.kickCount == members.size() - 2) {
-                            System.out.println("Kicking target");
+                            System.out.println("Kicking target " + targetMember.getDisplayName());
                             Container.kickCount = 0;
-                            return Mono.just(targerMember)
-                                    .flatMap(Member::getVoiceState)
-                                    .flatMap(e -> event.getClient().getVoiceConnectionRegistry()
-                                            .getVoiceConnection(e.getGuildId()))
-                                    .flatMap(VoiceConnection::disconnect);
+                            targetMember.edit().withNewVoiceChannelOrNull(null).block();
                         }
                     } else {
                         event.getMessage().getChannel().flatMap(textChannel -> textChannel.createMessage(errorEmbed)).block();
