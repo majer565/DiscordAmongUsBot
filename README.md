@@ -15,4 +15,4 @@ Available events:
  * Player leaves the channel
  * Target self mute/unmute
  * Checking contents of a message if its equal to "sus"
- * Vote kick target player _IN PROGRESS_
+ * Vote kick target player
