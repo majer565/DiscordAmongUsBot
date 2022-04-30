@@ -1,12 +1,12 @@
 # DiscordAmongUsBot
- DiscordAmongUsBot is a bot to track players and play sounds when events are called. </br>
+ DiscordAmongUsBot is a bot to track players and play some sounds when events are called. </br>
  
-#‼IMPORTANT‼
+‼IMPORTANT‼
 ---
  You are not allowed to use bot for any commercial benefits.
  **This bot is only for private usage.** </br>
  
-#📝Specs
+📝Specs
 ---
 Available events:
  * Target joins the channel
